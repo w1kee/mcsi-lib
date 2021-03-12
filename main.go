@@ -1,3 +1,4 @@
+// mcsi lib helps you get info for minecraft servers for your project
 package mcsi_lib
 
 import (
@@ -63,6 +64,7 @@ type InfoInfo struct {
 	Html  []string `json:"html,omitempty"`
 }
 
+// Gets the info for the supplied url
 func GetInfo(url string) (*Status, error) {
 	result, err := http.Get(fmt.Sprintf("https://api.mcsrvstat.us/2/%s", url))
 
